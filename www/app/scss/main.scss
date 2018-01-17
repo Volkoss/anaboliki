@@ -1,0 +1,335 @@
+@import 'sprite';
+@import '_variables';
+@import '_mixins';
+@import '_normalize';
+
+$enable-flex : true;
+$enable-grid-classes : true;
+@import '../bower_components/bootstrap-sass-grid/sass/bootstrap/_variables.scss';
+@import '../bower_components/bootstrap-sass-grid/sass/bootstrap/_mixins.scss';
+@import '../bower_components/bootstrap-sass-grid/sass/bootstrap/_normalize.scss';
+@import '../bower_components/bootstrap-sass-grid/sass/bootstrap/_grid.scss';
+
+//@include name;
+//@extend .class;
+// @import "file";
+// @mixin name($var:0){...};
+// @include sprite($s-ts1);
+
+
+.top_menu {
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 50px;
+}
+
+.top_menu li {
+    padding-right: 20px;
+    list-style: none;
+    display: inline-block;
+}
+
+.top_menu li:last-child {
+    padding-right: 0;
+}
+
+.top_menu li a {
+    font-family: 'RobotoCondensed';
+    font-size: 14px;
+    color: $main-color;
+}
+
+.top_menu li a:hover {
+    color: $color-white;
+}
+
+.logo a {
+    font-family: 'Coiny-Regular';
+    font-size: 24px;
+    color: $main-color;
+}
+
+.logo span {
+    color: $color-white;
+}
+
+.button_group {
+    display: flex;
+    align-items: center;
+    padding-right: 45px;
+}
+
+.btn_enter {
+    @include sprite($s-enter);
+}
+
+.btn_enter:hover {
+    @include sprite($s-enter_hover);
+}
+
+.btn_search {
+    @include sprite($s-search);
+    margin: 0 45px 0 50px;
+}
+
+.btn_search:hover {
+    @include sprite($s-search_hover);
+}
+
+.btn_basket {
+    @include sprite($s-basket);
+}
+
+.btn_basket:hover {
+    @include sprite($s-basket_hover);
+}
+
+.btn_enter,
+.btn_search,
+.btn_basket {
+    transition: all 0s;
+}
+
+.bottom_menu {
+    text-align: right;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    li {
+        padding-right: 40px;
+        list-style: none;
+        display: inline-block;
+        &:last-child {
+            padding-right: 0;
+        }
+        a {
+            font-family: 'RobotoCondensed';
+            font-size: 24px;
+            color: $color-black;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #13a513;
+            }
+        }
+    }
+}
+
+
+.main_slider {
+    position: relative;
+    text-align: center;
+    h1 {
+        font-family: 'Coiny-Regular';
+        font-size: 180px;
+        color: $main-color;
+        margin: 0;
+        padding-bottom: 50px;
+        margin-top: 28%;
+        span {
+            color: $color-white;
+        }
+    }
+
+    p {
+        color: $color-white;
+        font-size: 36px;
+        font-family: 'RobotoCondensed';
+    }
+
+    .item {
+        heigh: auto;
+        min-height: 1230px;
+    }
+
+    .slick-dots {
+    	position: absolute;
+        bottom: 20%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        list-style-type: square;
+        &:nth-child(2) {
+            padding: 0 15px 0 15px;
+        }
+        button {
+            color: transparent;
+            background: transparent;
+            border: none;
+        }
+
+        .slick-active {
+            color: $main-color;
+        }       
+    } 
+
+ //    .slick-prev{
+	// 	position: absolute;
+	// 	top: 10%;
+	// 	right: 20px;
+	// }
+}
+
+// border-top-left-radius:
+
+
+.our_advantage{
+	position: relative;
+	margin-top: -200px;
+	padding-bottom: 140px;
+	background: #fff;
+	background-image: url(../image/our_advantage.png);
+	border-top-left-radius: 50%;
+	border-top-right-radius: 20%;
+
+	h2{
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 30px;
+		color: $color-black;
+		text-align: right;
+		padding: 94px 0 110px 0;
+	}
+
+	.t-center{
+		text-align: center;
+	}
+
+	.price_img,
+	.hands_img,
+	.box_img,
+	.certificate_img{
+		display: inline-block;
+
+	}
+
+	.price_img{
+		@include sprite($s-price_down);
+	}
+
+	.hands_img{
+		@include sprite($s-hands);
+	}
+
+	.box_img{
+		@include sprite($s-box);
+	}
+
+	.certificate_img{
+		@include sprite($s-certificate);
+	}
+
+	.height_img{
+		height: 95px;
+		margin-bottom: 60px;
+	}
+
+	h3{
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 30px;
+		text-transform: uppercase;
+		padding-bottom: 13px;
+	}
+
+	a{
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 14px;
+		padding: 7px 12px 5px 11px;
+		background: $main-color;
+	}
+}
+
+
+.shares{
+	background-image: url(../image/share_bg.png);
+	padding: 100px 0 70px 0;
+	min-height: 700px;
+	h2{
+		color: $color-white;
+		text-align: center;
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 30px;
+		padding-bottom: 100px;
+	}
+
+	img{
+		border: 1px solid $main-color;
+		max-width: 100%;
+	}
+
+	h3{
+		color: $color-white;
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 18px;
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	.share_price{
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 36px;
+		color: $main-color;
+		float: left;
+		padding-right: 10px;
+	}
+
+	.del_price{
+		font-family: 'RobotoCondensed';
+		font-weight: 600;
+		font-size: 18px;
+		color: $color-white;
+		text-decoration: line-through;
+		padding-top: 13px;
+	}
+
+	.quantity{
+		button{
+			font-family: 'RobotoCondensed';
+			font-weight: 600;
+			font-size: 36px;
+			border: none;
+			background: #e9e9e9;
+			width: 26px;
+			height: 50px;
+			text-align: center;
+			margin-left: -4px;
+		}
+
+		input{
+			font-family: 'RobotoCondensed';
+			font-weight: 600;
+			font-size: 36px;
+			border: none;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			margin-left: -4px;
+		}
+
+		a{
+			font-family: 'RobotoCondensed';
+			font-size: 24px;
+			padding: 12px 10px 12px 15px;
+			background: $main-color;
+			color: $color-white;
+			display: inline-block;
+			vertical-align: top;
+				&:before{
+					content:'';
+					@include sprite($s-basket_quanity);
+					display: inline-block;
+					margin-right: 10px;
+				}
+		}
+	}
+
+}

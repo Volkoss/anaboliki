@@ -1,0 +1,9 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1",
+    "bootstrap-sass-grid": "^4.0.1"
+  }
+}

@@ -1,0 +1,125 @@
+
+/* 1. FONTS */
+/* ================================================ */
+
+// @include fontFace($family,$src,$weight: normal,$style: normal);
+
+
+@include fontFace('RobotoCondensed','../fonts/RobotoCondensed-Bold/RobotoCondensed-Bold',700,normal);
+@include fontFace('RobotoCondensed','../fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic',700,italic); 
+@include fontFace('RobotoCondensed','../fonts/RobotoCondensed-Italic/RobotoCondensed-Italic',400,italic); 
+@include fontFace('RobotoCondensed','../fonts/RobotoCondensed-Light/RobotoCondensed-Light',300,normal); 
+@include fontFace('RobotoCondensed','../fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic',300,italic); 
+@include fontFace('RobotoCondensed','../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular',400,normal); 
+
+@include fontFace('Coiny-Regular','../fonts/Coiny-Regular/Coiny-Regular',400,normal); 
+
+
+
+
+
+
+/* 2. NORMALIZE
+/* ================================================ */
+html, body, div, span, applet, main, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers*/
+article, aside, details, main, figcaption, figure, footer, header, hgroup, menu, nav, section{
+    display: block;
+}
+
+/* clearfix */
+.clearfix { zoom: 1; &:after{clear: both;} &:before, &:after { content: ""; display: table;}}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Tahoma, sans-serif;
+    line-height: 1;
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    font-size: 16px ;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote{
+    &:before, &:after{
+        content: '';
+        content: none;
+	}
+}
+
+q{
+    &:before, &:after{
+        content: '';
+        content: none;
+	}
+}
+
+table{
+    border-collapse: collapse;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+input, textarea{
+    color: #000;
+    outline: none;
+    border-radius: 0;
+    @include border-radius(0);
+    -webkit-appearance: none;
+}
+
+input{
+    &[type="button"], &[type="submit"]{
+        cursor: pointer;
+        -webkit-appearance: none;
+        outline: none;
+	}
+}
+
+button{
+    cursor: pointer;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+td, form{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+   @include transition(.2s);
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*{
+    @include box-sizing(border-box);
+    &:before, &:after {
+       @include box-sizing(border-box);
+	}
+}
